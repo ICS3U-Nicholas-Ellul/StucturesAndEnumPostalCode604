@@ -28,13 +28,13 @@ namespace OptionalPerameter403
             }
             else
             {
-            MessageBox.Show(funStreetAddress + funAptNumber   + funCity  + funProvince + funPostalCode);
+            MessageBox.Show(funStreetAddress + ", " + funAptNumber + ", " + funCity + ", " + funProvince + ", " + funPostalCode);
             }
         }
 
         public void AddressInfo(string funStreetAddress, string funCity, string funProvince, string funPostalCode)
         {
-            MessageBox.Show(funStreetAddress + + funCity + + funProvince + + funPostalCode);
+            MessageBox.Show(funStreetAddress + ", "  + funCity + ", " + funProvince + ", " + funPostalCode);
         }
 
 
