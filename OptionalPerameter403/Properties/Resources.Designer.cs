@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OptionalPerameter403.Properties
+namespace OptionalPerameterWithStruct603.Properties
 {
 
 

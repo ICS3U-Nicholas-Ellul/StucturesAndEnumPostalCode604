@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OptionalPerameter403
+namespace OptionalPerameterWithStruct603
 {
     static class Program
     {

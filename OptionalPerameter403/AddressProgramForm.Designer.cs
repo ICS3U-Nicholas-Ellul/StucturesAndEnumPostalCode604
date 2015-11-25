@@ -1,4 +1,4 @@
-﻿namespace OptionalPerameter403
+﻿namespace OptionalPerameterWithStruct603
 {
     partial class AddressProgramForm
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtAptNumber = new System.Windows.Forms.TextBox();
             this.txtStreetAddress = new System.Windows.Forms.TextBox();
-            this.txtProvince = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtPostalCode = new System.Windows.Forms.TextBox();
             this.lblAptNumber = new System.Windows.Forms.Label();
@@ -39,6 +39,9 @@
             this.lblProvince = new System.Windows.Forms.Label();
             this.lblPostalCode = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtProvince = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAptNumber
@@ -54,13 +57,6 @@
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.Size = new System.Drawing.Size(100, 20);
             this.txtStreetAddress.TabIndex = 1;
-            // 
-            // txtProvince
-            // 
-            this.txtProvince.Location = new System.Drawing.Point(130, 158);
-            this.txtProvince.Name = "txtProvince";
-            this.txtProvince.Size = new System.Drawing.Size(100, 20);
-            this.txtProvince.TabIndex = 2;
             // 
             // txtCity
             // 
@@ -136,11 +132,19 @@
             this.btnGo.UseVisualStyleBackColor = true;
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
-            // frmAddressProgram
+            // txtProvince
+            // 
+            this.txtProvince.Location = new System.Drawing.Point(130, 157);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(100, 20);
+            this.txtProvince.TabIndex = 11;
+            // 
+            // AddressProgramForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(242, 284);
+            this.Controls.Add(this.txtProvince);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.lblPostalCode);
             this.Controls.Add(this.lblProvince);
@@ -149,11 +153,11 @@
             this.Controls.Add(this.lblAptNumber);
             this.Controls.Add(this.txtPostalCode);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtProvince);
             this.Controls.Add(this.txtStreetAddress);
             this.Controls.Add(this.txtAptNumber);
-            this.Name = "frmAddressProgram";
+            this.Name = "AddressProgramForm";
             this.Text = "Address";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +167,6 @@
 
         private System.Windows.Forms.TextBox txtAptNumber;
         private System.Windows.Forms.TextBox txtStreetAddress;
-        private System.Windows.Forms.TextBox txtProvince;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtPostalCode;
         private System.Windows.Forms.Label lblAptNumber;
@@ -172,6 +175,8 @@
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.Label lblPostalCode;
         private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.TextBox txtProvince;
     }
 }
 
