@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionalPerameterWithStruct603", "OptionalPerameter403\OptionalPerameterWithStruct603.csproj", "{1D5B48B9-AB6F-4B5B-8768-5B30DCF9BCD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostalCodeEnumStruct604", "OptionalPerameter403\PostalCodeEnumStruct604.csproj", "{1D5B48B9-AB6F-4B5B-8768-5B30DCF9BCD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

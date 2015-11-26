@@ -4,7 +4,7 @@
  * Created for: ICS3U
  * Daily Assignment – Unit 6-03
  * This program lists all of your address details. It uses a 
- * perameter that refers to a perameter. Uses a structure as a mail address.
+ * perameter that refers to a perameter. Uses a structure as a mail address. Provinces are enum.
 */
 
 using System;
@@ -21,11 +21,11 @@ namespace OptionalPerameterWithStruct603
 {
     public partial class AddressProgramForm : Form
     {
-        /*CANPROVINCE selectedProvince;
-        
-        enum CANPROVINCE
+        CANPROVINCE selectedProvince;
+
+        public enum CANPROVINCE
         {
-           //PROVINCES
+            //PROVINCES
             BC,
             AL,
             MN,
@@ -42,18 +42,18 @@ namespace OptionalPerameterWithStruct603
             NU
 
         }
-        */
+        
         public struct MailingAddress
         {
             public string aptNumber;
             public string streetAddress;
             public string city;
-            public string province;
+            public CANPROVINCE province;
             public string postalCode;
         }
 
-
-        public void AddressInfo(string funStreetAddress, string funCity, string funProvince, string funPostalCode,string funAptNumber)
+        
+        public void AddressInfo(string funStreetAddress, string funCity, CANPROVINCE funProvince, string funPostalCode,string funAptNumber)
         {
             if(funAptNumber == "")
             {
@@ -65,12 +65,12 @@ namespace OptionalPerameterWithStruct603
             }
         }
 
-        public void AddressInfo(string funStreetAddress, string funCity, string funProvince, string funPostalCode)
+        public void AddressInfo(string funStreetAddress, string funCity, CANPROVINCE funProvince, string funPostalCode)
         {
             MessageBox.Show(funStreetAddress + ", "  + funCity + ", " + funProvince + ", " + funPostalCode, "Your Address");
         }
 
-
+    
         public AddressProgramForm()
         {
             InitializeComponent();
@@ -78,15 +78,36 @@ namespace OptionalPerameterWithStruct603
 
         private void btnGo_Click(object sender, EventArgs e)
         {
+            //input
             MailingAddress mailToMe = new MailingAddress();
 
             mailToMe.aptNumber = this.txtAptNumber.Text;
             mailToMe.streetAddress = this.txtStreetAddress.Text;
             mailToMe.city = this.txtCity.Text;
-            mailToMe.province = this.txtProvince.Text;
+            mailToMe.province = selectedProvince;
             mailToMe.postalCode = this.txtPostalCode.Text;
 
+            //process
             AddressInfo(mailToMe.streetAddress, mailToMe.city, mailToMe.province, mailToMe.postalCode, mailToMe.aptNumber);
+        }
+
+        private void cboProvinces_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //gets value from combo box
+            string selectedItem;           
+            selectedItem = Convert.ToString(this.cboProvinces.SelectedItem);
+            selectedProvince = (CANPROVINCE)(Enum.Parse(typeof(CANPROVINCE), selectedItem));
+            
+        }
+
+        private void AddressProgramForm_Load(object sender, EventArgs e)
+        {
+            //populate combo box with provinces
+            foreach (CANPROVINCE prov in Enum.GetValues(typeof(CANPROVINCE)))
+            {
+                this.cboProvinces.Items.Add(prov);
+            }
+            this.cboProvinces.SelectedIndex = 0;
         }
     }
 }
